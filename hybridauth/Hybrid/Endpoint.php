@@ -209,7 +209,7 @@ class Hybrid_Endpoint {
 			catch ( Exception $e ){
 				Hybrid_Logger::error( "Endpoint: Error while trying to init Hybrid_Auth: " . $e->getMessage()); 
 
-				throw new Hybrid_Exception( "Oophs. Error!" );
+				throw new Hybrid_Exception( "Endpoint: Error while trying to init Hybrid_Auth: " . $e->getMessage(), $e->getCode(), $e);
 			}
 		}
 	}
